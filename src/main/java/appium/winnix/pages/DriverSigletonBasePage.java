@@ -39,6 +39,8 @@ public class DriverSigletonBasePage {
 		}
 		return nixSession;
 	}
+	
+	
 	public static Wait<WindowsDriver> getFluentWait(){
 		if(wait == null){
 			wait = new FluentWait<>(nixSession)

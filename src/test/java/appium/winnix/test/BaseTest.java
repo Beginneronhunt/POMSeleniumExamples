@@ -2,7 +2,9 @@ package appium.winnix.test;
 
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import static appium.winnix.pages.DriverSigletonBasePage.getWindowsDriver;
 import static appium.winnix.pages.DriverSigletonBasePage.getFluentWait;
@@ -20,7 +22,7 @@ public class BaseTest {
 		wait = getFluentWait();
 	}
 
-
+		
 	@AfterSuite
 	public void tearDown() {
 		nixSession.quit();

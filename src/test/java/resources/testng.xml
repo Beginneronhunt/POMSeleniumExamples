@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests">
+    <test name="Sanity Tests">
+        <classes>
+            <class name="com.example.tests.TestClass1"/>
+        </classes>
+    </test>
+    
+    <test name="Smoke Tests">
+        <classes>
+            <class name="com.example.tests.TestClass2"/>
+        </classes>
+    </test>
+</suite>

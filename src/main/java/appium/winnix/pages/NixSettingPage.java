@@ -40,7 +40,7 @@ public class NixSettingPage {
 		return backBtnIcon;
 	}
 
-	public void clickOnAccountID() {
+	public NixSettingPage clickOnAccountID() {
 		WebElement accountID = wait.until(
 				ExpectedConditions.elementToBeClickable(
 						nixSession.findElement(
@@ -51,9 +51,10 @@ public class NixSettingPage {
 						)
 				);
 		accountID.click();
+		return this;
 	}
 
-	public void addAccountId() {
+	public NixSettingPage addAccountId() {
 		WebElement newAccountID = wait.until(
 				ExpectedConditions.elementToBeClickable(
 						nixSession.findElement(
@@ -70,9 +71,10 @@ public class NixSettingPage {
 				By.xpath("//*[@AutomationId='AccountIdView']//Button[@Name='OK']")
 				);
 		okAccountBtn.click();
+		return this;
 	}
 
-	public void clickOnServerPath() {
+	public NixSettingPage clickOnServerPath() {
 		WebElement serverPath = wait.until(
 				ExpectedConditions.elementToBeClickable(
 						nixSession.findElement(
@@ -81,9 +83,10 @@ public class NixSettingPage {
 						)
 				);
 		serverPath.click();
+		return this;
 	}
 
-	public void addServerPath() {
+	public NixSettingPage addServerPath() {
 		WebElement newServerPath = wait.until(
 				ExpectedConditions.elementToBeClickable(
 						nixSession.findElement(
@@ -100,6 +103,7 @@ public class NixSettingPage {
 				By.xpath("//*[@AutomationId='ServerPathView']//Button[@Name='OK']")
 				);
 		okServerPathBtn.click();
+		return this;
 	}
 
 	public void setPassword() {
@@ -138,14 +142,5 @@ public class NixSettingPage {
 				);
 		setPasswordDialougeBtn.click();
 	}
-	public Boolean clickOnServiceAlreadyRunningWindows() {
-		WebElement errorDialogue = nixSession.findElement(
-				By.xpath("//*[@Name='Error']/*[@AutomationId='2']")
-				);
-		Boolean serviceAlreadyRunning = errorDialogue.isDisplayed();
-		if (serviceAlreadyRunning = true) {
-			errorDialogue.click();
-		}
-		return serviceAlreadyRunning;
-	}
+	
 }
